@@ -90,8 +90,6 @@ struct ContentView: View {
     
     func flagTapped(_ number: Int){
         
-        
-        
         if number == correctAnswer {
             scoreTitle = "Correct"
             score += 1
@@ -103,13 +101,12 @@ struct ContentView: View {
             }
             gameStat.wrong += 1
         }
+        
         if score == 5 {
             showingStat = true
-        }
-        if score != 5 {
+        } else {
             showingScore = true
         }
-        
     }
     
     func askQuestion() {
@@ -117,8 +114,6 @@ struct ContentView: View {
         correctAnswer = Int.random(in: 0...2)
     }
 }
-
-
 
 
 
